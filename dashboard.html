@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Dashboard - Uttar Pradesh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="logo-section">
+                <img src="https://via.placeholder.com/80x80/ffffff/000000?text=UP" alt="UP Logo" class="logo">
+                <div class="title-section">
+                    <h1>Vendor Dashboard</h1>
+                    <p>Welcome, ABC Construction Ltd.</p>
+                </div>
+            </div>
+        </div>
+        <div class="date-nav">
+            <a href="index.html">Home</a> | <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="dashboard-content">
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <h3>Active Bids</h3>
+                    <div class="stat-number">3</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Won Tenders</h3>
+                    <div class="stat-number">12</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Bids</h3>
+                    <div class="stat-number">45</div>
+                </div>
+            </div>
+            
+            <div class="dashboard-section">
+                <h3>My Recent Bids</h3>
+                <table class="tenders-table">
+                    <thead>
+                        <tr>
+                            <th>Tender Title</th>
+                            <th>Bid Amount</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Work of shifting of HT/LT lines</td>
+                            <td>₹14,50,000</td>
+                            <td><span class="status pending">Under Review</span></td>
+                            <td><button class="action-btn">View</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function logout() {
+            alert('Logged out successfully!');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

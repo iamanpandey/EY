@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Tenders - Uttar Pradesh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="logo-section">
+                <img src="https://via.placeholder.com/80x80/ffffff/000000?text=UP" alt="UP Logo" class="logo">
+                <div class="title-section">
+                    <h1>Tenders Uttar Pradesh</h1>
+                    <p>The Uttar Pradesh Govt. Tenders Information System</p>
+                </div>
+            </div>
+        </div>
+        <div class="date-nav">
+            <a href="index.html">← Back to Home</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="search-page">
+            <h2>Advanced Tender Search</h2>
+            <form class="search-form">
+                <div class="form-group">
+                    <label>Tender ID/Reference No:</label>
+                    <input type="text" id="tenderId" placeholder="Enter tender reference number">
+                </div>
+                <div class="form-group">
+                    <label>Tender Title:</label>
+                    <input type="text" id="tenderTitle" placeholder="Enter keywords from tender title">
+                </div>
+                <div class="form-group">
+                    <label>Department:</label>
+                    <select id="department">
+                        <option value="">All Departments</option>
+                        <option value="electricity">Electricity Department</option>
+                        <option value="pwd">Public Works Department</option>
+                        <option value="health">Health Department</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Location:</label>
+                    <input type="text" id="location" placeholder="Enter location">
+                </div>
+                <button type="submit" class="search-submit">Search Tenders</button>
+            </form>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </main>
+
+    <script>
+        document.querySelector('.search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const results = document.getElementById('searchResults');
+            results.innerHTML = '<h3>Search Results</h3><p>2 tenders found matching your criteria.</p><div class="result-item"><a href="tender-details.html?id=1">Work of shifting of HT/LT lines...</a></div>';
+        });
+    </script>
+</body>
+</html>

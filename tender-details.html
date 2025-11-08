@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tender Details - Tenders Uttar Pradesh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="logo-section">
+                <img src="https://via.placeholder.com/80x80/ffffff/000000?text=UP" alt="UP Logo" class="logo">
+                <div class="title-section">
+                    <h1>Tenders Uttar Pradesh</h1>
+                    <p>The Uttar Pradesh Govt. Tenders Information System</p>
+                </div>
+            </div>
+            <div class="map-section">
+                <img src="https://via.placeholder.com/200x100/ffffff/cccccc?text=UP+Map" alt="UP Map">
+            </div>
+        </div>
+        <div class="date-nav">
+            <span class="date">08-Nov-2025</span>
+            <nav class="main-nav">
+                <a href="index.html">← Back to Home</a> |
+                <a href="#search">Search</a> |
+                <a href="#active">Active Tenders</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <aside class="sidebar">
+            <div class="sidebar-item">MIS Reports</div>
+            <div class="sidebar-item">Tenders by Location</div>
+            <div class="sidebar-item">Tenders by Organisation</div>
+            <div class="sidebar-item">Tenders by Classification</div>
+            <div class="sidebar-item">Tenders in Archive</div>
+            <div class="sidebar-item">Tenders Status</div>
+            <div class="sidebar-item">Cancelled/Retendered</div>
+            <div class="sidebar-item">Downloads</div>
+            <div class="sidebar-item">Debarment List</div>
+            <div class="sidebar-item">Announcements</div>
+        </aside>
+
+        <section class="tender-details-content">
+            <div class="tender-header">
+                <div class="tender-title">
+                    <span class="tender-icon">📋</span>
+                    <span class="title-text">Tender Details</span>
+                </div>
+                <button class="view-more-btn">📄 View More Details</button>
+            </div>
+
+            <div class="details-tabs">
+                <div class="tab active">Basic Details</div>
+            </div>
+
+            <div class="basic-details-table">
+                <table class="details-table">
+                    <tr>
+                        <td class="label">Organisation Chain</td>
+                        <td class="value" id="orgChain">Cheif Engineer Bareilly Zone PWD Bareilly | ISE BAREILLY CIRCLE PWD BAREILLY | EE PROVINCIAL DIVISION PWD BAREILLY</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Tender Reference Number</td>
+                        <td class="value" id="refNumber">5368/E-Tender/2025-26 Dated 03.10.2025</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Tender ID</td>
+                        <td class="value" id="tenderId">2025_CEBLY_1089275_1</td>
+                        <td class="label">Withdrawal Allowed</td>
+                        <td class="value">Yes</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Tender Type</td>
+                        <td class="value">Open Tender</td>
+                        <td class="label">Form Of Contract</td>
+                        <td class="value">Fixed-rate</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Tender Category</td>
+                        <td class="value">Works</td>
+                        <td class="label">No. of Covers</td>
+                        <td class="value">2</td>
+                    </tr>
+                    <tr>
+                        <td class="label">General Technical Evaluation Allowed</td>
+                        <td class="value">No</td>
+                        <td class="label">ItemWise Technical Evaluation Allowed</td>
+                        <td class="value">No</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Payment Mode</td>
+                        <td class="value">Online</td>
+                        <td class="label">Is Multi Currency Allowed For BOQ</td>
+                        <td class="value">No</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Is Multi Currency Allowed For Fee</td>
+                        <td class="value">No</td>
+                        <td class="label">Allow Two Stage Bidding</td>
+                        <td class="value">No</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="sections-container">
+                <div class="payment-section">
+                    <div class="section-header">Payment Instruments</div>
+                    <table class="payment-table">
+                        <thead>
+                            <tr>
+                                <th>Online Bankers</th>
+                                <th>S.No</th>
+                                <th>Bank Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="1">Online Bankers</td>
+                                <td>1</td>
+                                <td>SBI Bank</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="covers-section">
+                    <div class="section-header">Covers Information, No. Of Covers - 2</div>
+                    <table class="covers-table">
+                        <thead>
+                            <tr>
+                                <th>Cover No</th>
+                                <th>Cover Type</th>
+                                <th>Description</th>
+                                <th>Document Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Fee/PreQual/Technical</td>
+                                <td>Online Tender Fees Receipts<br>NIT</td>
+                                <td>.pdf<br>.pdf</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Finance</td>
+                                <td>BOQ</td>
+                                <td>.xls</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Get tender ID from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const tenderId = urlParams.get('id');
+        
+        // Sample tender data with detailed information
+        const tenderData = {
+            '1': { orgChain: 'Chief Engineer Electricity Department Ghazipur | Superintending Engineer EDD Ghazipur | Executive Engineer EDD Jangipur', refNumber: 'G7/EDC(G)/2025-26 Dated 10.11.2025', tenderId: '2025_EDD_1089275_1' },
+            '2': { orgChain: 'Chief Engineer Electricity Department | Superintending Engineer Ghazipur Circle | Executive Engineer Division Ghazipur', refNumber: 'G5/EDC(G)/2025-26 Dated 05.11.2025', tenderId: '2025_EDD_1089276_1' },
+            '3': { orgChain: 'Chief Engineer Rural Development | Superintending Engineer PMGSY | Executive Engineer Rural Works', refNumber: 'RD/PMGSY/2025-27 Dated 12.11.2025', tenderId: '2025_RD_1089277_1' },
+            '4': { orgChain: 'Director Medical Health Services | Chief Medical Officer Lucknow | Medical Superintendent PHC', refNumber: 'MED/LKO/2025-28 Dated 13.11.2025', tenderId: '2025_MED_1089278_1' },
+            '5': { orgChain: 'Director Basic Education | District Basic Education Officer Kanpur | Block Education Officer', refNumber: 'EDU/KNP/2025-29 Dated 14.11.2025', tenderId: '2025_EDU_1089279_1' },
+            '6': { orgChain: 'Chief Engineer PWD Agra | Superintending Engineer PWD Circle | Executive Engineer PWD Division', refNumber: 'PWD/AGR/2025-30 Dated 15.11.2025', tenderId: '2025_PWD_1089280_1' },
+            '7': { orgChain: 'Chief Engineer Water Supply | Superintending Engineer Varanasi | Executive Engineer Water Works', refNumber: 'WS/VNS/2025-31 Dated 16.11.2025', tenderId: '2025_WS_1089281_1' },
+            '8': { orgChain: 'Director Information Technology | Joint Director IT Services | Assistant Director Digital India', refNumber: 'IT/DIG/2025-32 Dated 17.11.2025', tenderId: '2025_IT_1089282_1' },
+            '9': { orgChain: 'Chief Engineer Irrigation | Superintending Engineer Gorakhpur | Executive Engineer Drainage Division', refNumber: 'IRR/GKP/2025-33 Dated 18.11.2025', tenderId: '2025_IRR_1089283_1' },
+            '10': { orgChain: 'Director Urban Development | Municipal Commissioner Meerut | Executive Engineer UDD', refNumber: 'UDD/MRT/2025-34 Dated 19.11.2025', tenderId: '2025_UDD_1089284_1' },
+            '11': { orgChain: 'Chief Engineer PWD | Superintending Engineer Maintenance Circle | Executive Engineer Paint Division', refNumber: 'PWD/PAINT/2025-35 Dated 20.11.2025', tenderId: '2025_PWD_1089285_1' }
+        };
+        
+        // Display tender details
+        function displayTenderDetails() {
+            const tender = tenderData[tenderId];
+            if (tender) {
+                document.getElementById('orgChain').textContent = tender.orgChain;
+                document.getElementById('refNumber').textContent = tender.refNumber;
+                document.getElementById('tenderId').textContent = tender.tenderId;
+                
+                // Add Asian Paints specific details for tender ID 11
+                if (tenderId === '11') {
+                    addAsianPaintsDetails();
+                }
+            }
+        }
+        
+        function addAsianPaintsDetails() {
+            const detailsTable = document.querySelector('.basic-details-table');
+            const asianPaintsSection = document.createElement('div');
+            asianPaintsSection.className = 'asian-paints-details';
+            asianPaintsSection.innerHTML = `
+                <div class="section-header" style="background-color: #d2691e; color: white; padding: 10px 15px; margin: 20px 0 10px 0; font-weight: bold;">Asian Paints Tender Specifications</div>
+                <table class="details-table">
+                    <tr><td class="label">Issuing Authority</td><td class="value">Public Works Department, Uttar Pradesh</td></tr>
+                    <tr><td class="label">Site Location</td><td class="value">Government Buildings across Lucknow, Kanpur, Agra Districts</td></tr>
+                    <tr><td class="label">Scope of Work</td><td class="value">Supply and Application of Premium Quality Paint</td></tr>
+                    <tr><td class="label">Brand Specified</td><td class="value">Asian Paints or Equivalent (Berger, Dulux, Nerolac)</td></tr>
+                    <tr><td class="label">Quantity/Area</td><td class="value">50,000 Sq. Meters (Interior: 30,000 Sq.M, Exterior: 20,000 Sq.M)</td></tr>
+                    <tr><td class="label">Product Brand & Make</td><td class="value">Asian Paints Apex Ultima, Royale Luxury Emulsion</td></tr>
+                    <tr><td class="label">Surface Conditions</td><td class="value">Mixed - 60% Repaint, 40% New Surface (Concrete/Plaster)</td></tr>
+                    <tr><td class="label">Number of Coats</td><td class="value">Primer: 1 Coat, Base: 2 Coats, Finish: 1 Coat</td></tr>
+                    <tr><td class="label">Texture & Shade</td><td class="value">Matt Finish, Govt. Standard Colors (White, Cream, Light Blue)</td></tr>
+                    <tr><td class="label">Delivery Timeline</td><td class="value">Material Supply: 15 days, Application: 45 days from award</td></tr>
+                    <tr><td class="label">Delivery Address</td><td class="value">PWD Store, Sector-12, Gomti Nagar, Lucknow-226010</td></tr>
+                </table>
+                
+                <div class="section-header" style="background-color: #d2691e; color: white; padding: 10px 15px; margin: 20px 0 10px 0; font-weight: bold;">Eligibility & Financial Requirements</div>
+                <table class="details-table">
+                    <tr><td class="label">DSC Requirement</td><td class="value">Class-3 Digital Signature Certificate Mandatory</td></tr>
+                    <tr><td class="label">GST Registration</td><td class="value">Valid GST Registration in Uttar Pradesh</td></tr>
+                    <tr><td class="label">Experience Required</td><td class="value">Min 3 years in Govt. Paint Supply/Application (₹50L+ projects)</td></tr>
+                    <tr><td class="label">Financial Criteria</td><td class="value">Annual Turnover: ₹2 Crores, Working Capital: ₹50 Lakhs</td></tr>
+                    <tr><td class="label">EMD Amount</td><td class="value">₹2,00,000 (Online Payment/Bank Guarantee)</td></tr>
+                    <tr><td class="label">Performance Security</td><td class="value">10% of Contract Value (₹5,00,000)</td></tr>
+                    <tr><td class="label">Payment Terms</td><td class="value">30% Advance, 50% on Delivery, 20% on Completion + GST</td></tr>
+                </table>
+                
+                <div class="section-header" style="background-color: #d2691e; color: white; padding: 10px 15px; margin: 20px 0 10px 0; font-weight: bold;">Technical & Safety Requirements</div>
+                <table class="details-table">
+                    <tr><td class="label">Storage Instructions</td><td class="value">Dry, ventilated area, 5-35°C, away from heat sources</td></tr>
+                    <tr><td class="label">Safety Measures</td><td class="value">PPE mandatory, proper ventilation, fire safety compliance</td></tr>
+                    <tr><td class="label">Handling Guidelines</td><td class="value">Trained personnel, proper mixing ratios, weather conditions</td></tr>
+                    <tr><td class="label">Quality Standards</td><td class="value">ISI marked products, BIS certification required</td></tr>
+                </table>
+                
+                <div class="section-header" style="background-color: #d2691e; color: white; padding: 10px 15px; margin: 20px 0 10px 0; font-weight: bold;">Submission & Evaluation</div>
+                <table class="details-table">
+                    <tr><td class="label">Submission Procedure</td><td class="value">Online submission through UP e-Procurement portal only</td></tr>
+                    <tr><td class="label">Technical Bid Opening</td><td class="value">24-Nov-2025 at 11:00 AM</td></tr>
+                    <tr><td class="label">Financial Bid Opening</td><td class="value">26-Nov-2025 at 02:00 PM (if technically qualified)</td></tr>
+                    <tr><td class="label">Evaluation Criteria</td><td class="value">L1 basis (Lowest technically qualified bidder)</td></tr>
+                    <tr><td class="label">Award Conditions</td><td class="value">Subject to verification of documents and site inspection</td></tr>
+                </table>
+                
+                <div class="section-header" style="background-color: #d2691e; color: white; padding: 10px 15px; margin: 20px 0 10px 0; font-weight: bold;">Contract Terms & Conditions</div>
+                <table class="details-table">
+                    <tr><td class="label">Work Order Validity</td><td class="value">90 days from issue date</td></tr>
+                    <tr><td class="label">Completion Timeline</td><td class="value">60 days from work order (including material supply)</td></tr>
+                    <tr><td class="label">Penalty Clause</td><td class="value">0.5% per day delay (max 10% of contract value)</td></tr>
+                    <tr><td class="label">Warranty Period</td><td class="value">5 years for paint work, 2 years for material defects</td></tr>
+                </table>
+                
+                <div class="section-header" style="background-color: #d2691e; color: white; padding: 10px 15px; margin: 20px 0 10px 0; font-weight: bold;">Inclusions & Exclusions</div>
+                <table class="details-table">
+                    <tr><td class="label">Inclusions</td><td class="value">Material supply, application, minor surface preparation, cleanup</td></tr>
+                    <tr><td class="label">Scaffolding</td><td class="value">Contractor's scope (up to 3 floors height)</td></tr>
+                    <tr><td class="label">Surface Preparation</td><td class="value">Filling, sanding, primer application included</td></tr>
+                    <tr><td class="label">Exclusions</td><td class="value">Major repairs, structural work, old paint removal (if lead-based)</td></tr>
+                </table>
+                
+                <div class="section-header" style="background-color: #d2691e; color: white; padding: 10px 15px; margin: 20px 0 10px 0; font-weight: bold;">Required Documents</div>
+                <table class="details-table">
+                    <tr><td class="label">Product Certifications</td><td class="value">ISI mark, BIS certification, test certificates</td></tr>
+                    <tr><td class="label">Brand Authorization</td><td class="value">Dealership certificate from Asian Paints</td></tr>
+                    <tr><td class="label">Technical Documents</td><td class="value">Product data sheets, MSDS, application guidelines</td></tr>
+                    <tr><td class="label">Company Documents</td><td class="value">Registration, GST, PAN, experience certificates, financial statements</td></tr>
+                </table>
+            `;
+            detailsTable.parentNode.insertBefore(asianPaintsSection, detailsTable.nextSibling);
+        }
+        
+        // Initialize page
+        displayTenderDetails();
+        
+        // Add sidebar functionality
+        document.querySelectorAll('.sidebar-item').forEach(item => {
+            item.addEventListener('click', function() {
+                alert('Navigating to: ' + this.textContent);
+            });
+        });
+        
+        // View more details button
+        document.querySelector('.view-more-btn').addEventListener('click', function() {
+            alert('Opening detailed tender document...');
+        });
+    </script>
+
+    <style>
+        .tender-details-content {
+            background-color: white;
+            padding: 0;
+        }
+        
+        .tender-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tender-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #007bff;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .view-more-btn {
+            background-color: #d2691e;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .details-tabs {
+            background-color: #d2691e;
+            padding: 0;
+        }
+        
+        .tab {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #d2691e;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px 8px 0 0;
+        }
+        
+        .basic-details-table {
+            padding: 20px;
+        }
+        
+        .details-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        
+        .details-table td {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+        
+        .details-table .label {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            width: 25%;
+        }
+        
+        .details-table .value {
+            background-color: white;
+        }
+        
+        .sections-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 0 20px 20px;
+        }
+        
+        .payment-section, .covers-section {
+            border: 1px solid #ddd;
+        }
+        
+        .section-header {
+            background-color: #d2691e;
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+        
+        .payment-table, .covers-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .payment-table th, .covers-table th {
+            background-color: #f8f9fa;
+            padding: 8px;
+            border: 1px solid #ddd;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .payment-table td, .covers-table td {
+            padding: 8px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .sections-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

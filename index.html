@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenders Uttar Pradesh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="logo-section">
+                <img src="https://via.placeholder.com/80x80/ffffff/000000?text=UP" alt="UP Logo" class="logo">
+                <div class="title-section">
+                    <h1>Tenders Uttar Pradesh</h1>
+                    <p>The Uttar Pradesh Govt. Tenders Information System</p>
+                </div>
+            </div>
+            <div class="map-section">
+                <img src="https://via.placeholder.com/200x100/ffffff/cccccc?text=UP+Map" alt="UP Map">
+            </div>
+        </div>
+        <div class="date-nav">
+            <span class="date">08-Nov-2025</span>
+            <nav class="main-nav">
+                <a href="search.html">Search</a> |
+                <a href="active-tenders.html">Active Tenders</a> |
+                <a href="closing-date.html">Tenders by Closing Date</a> |
+                <a href="corrigendum.html">Corrigendum</a> |
+                <a href="results.html">Results of Tenders</a>
+            </nav>
+            <div class="top-links">
+                <a href="index.html">🏠 Home</a>
+                <a href="contact.html">✉ Contact Us</a>
+                <a href="sitemap.html">🗺 SiteMap</a>
+            </div>
+        </div>
+        <div class="notice-bar">
+            📄 For online Payment related issues, kindly send an email with Bank Reference Number to this email ID merchant@sbi.co.in for clarifications.
+        </div>
+    </header>
+
+    <main class="main-content">
+        <aside class="sidebar">
+            <div class="sidebar-item">MIS Reports</div>
+            <div class="sidebar-item">Tenders by Location</div>
+            <div class="sidebar-item">Tenders by Organisation</div>
+            <div class="sidebar-item">Tenders by Classification</div>
+            <div class="sidebar-item">Tenders in Archive</div>
+            <div class="sidebar-item">Tenders Status</div>
+            <div class="sidebar-item">Cancelled/Retendered</div>
+        </aside>
+
+        <section class="content">
+            <div class="welcome-section">
+                <h2>Welcome to eProcurement System</h2>
+                <p>The eProcurement System of Uttar Pradesh enables the Tenderers to download the Tender Schedule free of cost and then submit the bids online through this portal.</p>
+                
+                <div class="app-links">
+                    <img src="https://via.placeholder.com/150x50/000000/ffffff?text=Dashboard" alt="Dashboard">
+                    <img src="https://via.placeholder.com/150x50/000000/ffffff?text=Google+Play" alt="Google Play">
+                    <img src="https://via.placeholder.com/150x50/000000/ffffff?text=App+Store" alt="App Store">
+                </div>
+            </div>
+
+            <div class="tenders-section">
+                <h3 class="section-title">📋 Latest Tenders</h3>
+                <div class="tenders-container">
+                    <table class="tenders-table" id="tendersTable">
+                        <thead>
+                            <tr>
+                                <th>Tender Title</th>
+                                <th>Reference No</th>
+                                <th>Closing Date</th>
+                                <th>Bid Opening Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tendersBody">
+                            <!-- Tenders will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <p class="update-info">Latest Tenders updates every 15 mins.</p>
+                <a href="active-tenders.html" class="more-link">More...</a>
+            </div>
+        </section>
+
+        <aside class="right-sidebar">
+            <div class="login-section">
+                <button class="login-btn">Click here to Login</button>
+            </div>
+            <div class="sidebar-links">
+                <a href="enrollment.html">Online Bidder Enrollment</a>
+                <a href="forgot-password.html">Generate / Forgot Password?</a>
+                <a href="nodal-officer.html">Find My Nodal Officer</a>
+            </div>
+            <div class="search-section">
+                <input type="text" placeholder="Search with ID/Title/Reference no" class="search-input">
+                <button class="search-btn">🔍 Tender Search</button>
+                <button class="go-btn">Go</button>
+                <a href="search.html">Advanced Search</a>
+            </div>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

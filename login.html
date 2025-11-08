@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tenders Uttar Pradesh</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="logo-section">
+                <img src="https://via.placeholder.com/80x80/ffffff/000000?text=UP" alt="UP Logo" class="logo">
+                <div class="title-section">
+                    <h1>Tenders Uttar Pradesh</h1>
+                    <p>Vendor Login Portal</p>
+                </div>
+            </div>
+        </div>
+        <div class="date-nav">
+            <a href="index.html">← Back to Home</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="login-container">
+            <div class="login-form">
+                <h2>Vendor Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>Username/Email:</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="login-submit">Login</button>
+                </form>
+                <div class="login-links">
+                    <a href="enrollment.html">New User? Register Here</a>
+                    <a href="forgot-password.html">Forgot Password?</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Login successful! Redirecting to dashboard...');
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>
